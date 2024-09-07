@@ -11,12 +11,12 @@ bouton_a:
 	@node detect-touch-dev.js
 
 bouton_b:
-	@echo "✨ Mise en état du dossier sur github✨"
+	@echo "✨ Mise en état du dossier sur GitHub ✨"
 	@git add .
-	@git commit -m "test"
-	@git push
-	@echo "✨ Mise à jour terminée✨"
-
+	-@git commit -m "test"  # Ignore l'erreur de commit s'il n'y a pas de changements
+	-@git push              # Ignore l'erreur de push si le dépôt est à jour
+	@echo "✨ Mise à jour terminée ✨"
+	
 bouton_start:
 	@echo "Starting the server..."
 	./my_program
