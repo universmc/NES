@@ -3,6 +3,29 @@ NODE_ENV = development
 NODE_PORT = 5144
 NODE_APP = index.js
 
+# Makefile pour mapper les boutons du contrôleur NES
+.PHONY: bouton_a bouton_b bouton_start bouton_select
+
+bouton_a:
+	@echo "Compiling project..."
+	@node detect-touch-dev.js
+
+bouton_b:
+	@echo "✨ Mise en état du dossier sur github✨"
+	@git add .
+	@git commit -m "test"
+	@git push
+	@echo "✨ Mise à jour terminée✨"
+
+bouton_start:
+	@echo "Starting the server..."
+	./my_program
+
+bouton_select:
+	@echo "Pausing process or displaying status..."
+	pkill -STOP my_program || echo "Program not running"
+
+
 menu :
 	@echo "Welcom To cycliq Economical system."
 	@echo""
