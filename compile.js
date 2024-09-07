@@ -23,7 +23,7 @@ if (deviceInfo) {
 
         // Mapper les boutons aux actions Makefile
         if (buttonA) runCommand('make bouton_a');
-        if (buttonB) runCommand('make bouton_b');
+        if (buttonB) runCommand('make bouton_b'); // Bouton B pour Git
         if (buttonStart) runCommand('make bouton_start');
         if (buttonSelect) runCommand('make bouton_select');
     });
