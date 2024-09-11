@@ -26,6 +26,26 @@ if (deviceInfo) {
         if (buttonB) runCommand('make bouton_b'); // Bouton B pour Git
         if (buttonStart) runCommand('make bouton_start');
         if (buttonSelect) runCommand('make bouton_select');
+                // Analyse du joystick
+                const joystickX = data[3]; // Valeur du joystick sur l'axe X
+                const joystickY = data[4]; // Valeur du joystick sur l'axe Y
+        
+            //    console.log(`Joystick X: ${joystickX}, Joystick Y: ${joystickY}`);
+                
+                // Vérifier la position du joystick
+                if (joystickX === 0x7f && joystickY === 0x7f) {
+            //        console.log('Joystick centré');
+                } else if (joystickX < 0x7f) {
+                    console.log('Joystick déplacé vers la gauche');
+                } else if (joystickX > 0x7f) {
+                    console.log('Joystick déplacé vers la droite');
+                }
+        
+                if (joystickY < 0x7f) {
+                    console.log('Joystick déplacé vers le haut');
+                } else if (joystickY > 0x7f) {
+                    console.log('Joystick déplacé vers le bas');
+                }
     });
 
     device.on('error', (err) => {

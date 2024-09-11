@@ -7,23 +7,16 @@ NODE_APP = index.js
 .PHONY: bouton_a bouton_b bouton_start bouton_select
 
 bouton_a:
-	@echo "Compiling project..."
-	@node detect-touch-dev.js
+	@echo "🌴 Compiling project...🌴"
 
 bouton_b:
 	@echo "✨ Mise en état du dossier sur GitHub ✨"
-	@git add .
-	-@git commit -m "test"  # Ignore l'erreur de commit s'il n'y a pas de changements
-	-@git push              # Ignore l'erreur de push si le dépôt est à jour
-	@echo "✨ Mise à jour terminée ✨"
-	
 bouton_start:
-	@echo "Starting the server..."
-	./my_program
+	@echo "🔷 Starting the server...🔷 "
 
 bouton_select:
-	@echo "Pausing process or displaying status..."
-	pkill -STOP my_program || echo "Program not running"
+	@echo "💾 Pausing process or displaying status...💾 "
+
 
 
 menu :
