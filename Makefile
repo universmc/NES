@@ -7,10 +7,10 @@ NODE_APP = index.js
 .PHONY: bouton_a bouton_b bouton_start bouton_select
 
 bouton_a:
-	@echo "🌴 Compiling project...🌴"
+	@echo "🌴 Compiling project Bouton 🅰️  .. 🌴 🌴 .."
 
 bouton_b:
-	@echo "✨ Mise en état du dossier sur GitHub ✨"
+	@echo "✨ DevOps bouton 🅱️  ✨"
 bouton_start:
 	@echo "🔷 Starting the server...🔷 "
 
